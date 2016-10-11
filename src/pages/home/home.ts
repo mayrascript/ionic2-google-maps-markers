@@ -77,7 +77,7 @@ export class HomePage {
           marker.showInfoWindow();
       });
     }else{
-      Toast.show("No se ha podido obtener su ubicacición", '5000', 'bottom').subscribe(
+      Toast.show("No se ha podido obtener su ubicación", '5000', 'bottom').subscribe(
         toast => {
           console.log(toast);
         }
