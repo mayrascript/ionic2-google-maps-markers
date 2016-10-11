@@ -1,5 +1,5 @@
-# ionic2-google-maps-native
-Google maps native in Ionic 2
+# ionic2-google-maps-markers
+Google maps native in Ionic 2 with custom marker
 
 ### 1. Install the the latest version of the Ionic CLI:
 
@@ -11,11 +11,11 @@ Google maps native in Ionic 2
 
 ### 3. Clone this repository
 
-`$ git clone https://github.com/mayrarodriguez1709/ionic2-google-maps-native`
+`$ git clone https://github.com/mayrarodriguez1709/ionic2-google-maps-markers`
 
-### 4. Navigate to the ionic2-google-maps-native directory:
+### 4. Navigate to the ionic2-google-maps-markers directory:
 
-`$ cd ionic2-google-maps-native`
+`$ cd ionic2-google-maps-markers`
 
 ### 5. Install the dependencies
 
