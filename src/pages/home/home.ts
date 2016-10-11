@@ -3,10 +3,8 @@ import { Component} from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 
 import {Geolocation, GoogleMap, GoogleMapsEvent, GoogleMapsLatLng, 
-  GoogleMapsMarkerOptions, GoogleMapsMarker, Toast,
-  GoogleMapsMarkerIcon} from 'ionic-native';
+  GoogleMapsMarkerOptions, GoogleMapsMarker, Toast} from 'ionic-native';
 
-declare var google;
 
 @Component({
   selector: 'page-home',
@@ -66,11 +64,7 @@ export class HomePage {
 
   setMarker(){
     if(this.latLng){
-      //let customMarker = "www/assets/custom-marker.png";
-
-      let customMarker:GoogleMapsMarkerIcon = {
-        url: "www/assets/custom-marker.png"
-      };
+      let customMarker = "www/assets/custom-marker.png";
 
       let markerOptions: GoogleMapsMarkerOptions = {
         position: this.latLng,
