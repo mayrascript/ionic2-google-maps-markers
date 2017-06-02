@@ -1,15 +1,14 @@
 import { Component} from '@angular/core';
-import { IonicPage, NavController, Platform } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
-import { Geolocation, Geoposition } from '@ionic-native/geolocation';
+import { Geolocation } from '@ionic-native/geolocation';
 import {
  GoogleMaps,
  GoogleMap,
  GoogleMapsEvent,
  LatLng,
  CameraPosition,
- MarkerOptions,
- Marker
+ MarkerOptions
 } from '@ionic-native/google-maps';
 
 @IonicPage()
@@ -21,7 +20,40 @@ export class HomePage {
 
   map: GoogleMap;
   myPosition: any = {};
-  markers: any[] = [];
+  markers: any[] = [
+    {
+      position:{
+        latitude: -17.3666745,
+        longitude: -66.2387878,
+      },
+      title:'Point 1',
+      icon: 'www/assets/imgs/marker-green.png'
+    },
+    {
+      position:{
+        latitude: -17.3706884,
+        longitude: -66.2397749,
+      },
+      title:'Point 2',
+      icon: 'www/assets/imgs/marker-blue.png'
+    },
+    {
+      position:{
+        latitude: -17.3731049,
+        longitude: -66.2373716,
+      },
+      title:'Point 3',
+      icon: 'www/assets/imgs/marker-green.png'
+    },
+    {
+      position:{
+        latitude: -17.3809686,
+        longitude: -66.2393457,
+      },
+      title:'Point 4',
+      icon: 'www/assets/imgs/marker-blue.png'
+    },
+  ];
  
   constructor(
     private navCtrl: NavController,
@@ -51,25 +83,25 @@ export class HomePage {
     // create a new map by passing HTMLElement
     let element: HTMLElement = document.getElementById('map');
 
-    let map: GoogleMap = this.googleMaps.create(element);
+    this.map = this.googleMaps.create(element);
 
     // create CameraPosition
     let position: CameraPosition = {
       target: new LatLng(this.myPosition.latitude, this.myPosition.longitude),
-      zoom: 18,
+      zoom: 12,
       tilt: 30
     };
 
-    map.one(GoogleMapsEvent.MAP_READY).then(()=>{
+    this.map.one(GoogleMapsEvent.MAP_READY).then(()=>{
       console.log('Map is ready!');
 
       // move the map's camera to position
-      map.moveCamera(position);
+      this.map.moveCamera(position);
 
       let markerOptions: MarkerOptions = {
         position: this.myPosition,
         title: "Hello",
-        icon: 'www/assets/imgs/custom-marker.png'
+        icon: 'www/assets/imgs/marker-pink.png'
       };
 
       this.addMarker(markerOptions);
