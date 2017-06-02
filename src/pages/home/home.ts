@@ -39,16 +39,16 @@ export class HomePage {
     },
     {
       position:{
-        latitude: -17.3731049,
-        longitude: -66.2373716,
+        latitude: -17.391398,
+        longitude: -66.2407904,
       },
       title:'Point 3',
       icon: 'www/assets/imgs/marker-green.png'
     },
     {
       position:{
-        latitude: -17.3809686,
-        longitude: -66.2393457,
+        latitude: -17.3878887,
+        longitude: -66.223664,
       },
       title:'Point 4',
       icon: 'www/assets/imgs/marker-blue.png'
