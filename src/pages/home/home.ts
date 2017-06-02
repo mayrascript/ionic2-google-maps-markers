@@ -69,7 +69,7 @@ export class HomePage {
       let markerOptions: MarkerOptions = {
         position: this.myPosition,
         title: "Hello",
-        icon: ''
+        icon: 'www/assets/imgs/custom-marker.png'
       };
 
       this.addMarker(markerOptions);
